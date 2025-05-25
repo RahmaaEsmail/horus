@@ -9,6 +9,7 @@ import project_img_3 from "@/assets/img/project/details1-3.jpg";
 import "./project-details.scss";
 import SeriveDetailsModal from "../ServiceDetailsModal/SeriveDetailsModal";
 import project_data from "@/data/project_data";
+import DetailsImagesModal from "../DetailsImagesModal/DetailsImagesModal";
 
 interface DataType {
   address: string;
@@ -250,8 +251,10 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
           </div>
         </div>
       </div>
+      
+      <DetailsImagesModal  open={openModalImg} setOpen={setOpenModalImg} images={filteredData?.images}/>
 
-      <SeriveDetailsModal open={openModalImg} setOpen={setOpenModalImg} images={filteredData?.images}/>
+      {/* <SeriveDetailsModal open={openModalImg} setOpen={setOpenModalImg} images={filteredData?.images}/> */}
     </div>
   );
 };

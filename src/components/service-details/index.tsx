@@ -1,50 +1,27 @@
 "use client";
-import HeaderFive from '@/layouts/headers/HeaderFive';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import HeaderOne from '@/layouts/headers/HeaderOne';
+import FooterThree from '@/layouts/footers/FooterThree';
 import Breadcrumb from '../common/Breadcrumb';
 import ServiceDetailsArea from './ServiceDetailsArea';
 import ContactAreaHomeOne from '../homes/multi-page/home/ContactAreaHomeOne';
-import FooterOne from '@/layouts/footers/FooterOne';
-import HeaderOne from '@/layouts/headers/HeaderOne';
-import FooterThree from '@/layouts/footers/FooterThree';
-import ServiceBenefits from './ServiceBenefits';
 import ServiceAsk from './ServiceAsk';
-import ServiceDetailsFormQuote  from './serviceDetailsFormQuote';
+import ServiceDetailsFormQuote from './serviceDetailsFormQuote';
 import { service_data } from '../service/SeerviceArea';
 
 interface ServiceDetailsProps {
   serviceId: string | string[];
 }
 
-interface ServiceData {
-  id: number;
-  home: string;
-  img: string;
-  title: string;
-  description: string;
-  images: string[];
-}
-
 const ServiceDetails: React.FC<ServiceDetailsProps> = ({ serviceId }) => {
-  const [filteredData, setFilteredData] = useState<ServiceData | null>(null);
   const service = service_data.find(item => item.id === Number(serviceId));
-   
-  console.log(serviceId);
-  
-  useEffect(() => {
-    const finalData = service_data?.find(item => item?.id === Number(serviceId));
-    console.log(finalData);
-    if (finalData) {
-      setFilteredData(finalData as ServiceData);
-    }
-  }, [serviceId]);
 
   if (!service) {
-    return <div>Service not found</div>;
-  }
-
-  if (!filteredData) {
-    return <div>Loading...</div>;
+    return (
+      <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <h2>Service not found</h2>
+      </div>
+    );
   }
 
   return (
@@ -53,8 +30,12 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ serviceId }) => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb image={filteredData?.images[filteredData?.images?.length - 1]} title={filteredData?.title || "Service Details"} subtitle='Service Details' />
-            <ServiceDetailsArea serviceId={serviceId} />
+            <Breadcrumb
+              image="https://res.cloudinary.com/dbz6ebekj/image/upload/v1748067464/Highschool_9_Lib-persp-min_sxyhsv.jpg"
+              title={service.title}
+              subtitle="Service Details"
+            />
+            <ServiceDetailsArea serviceId={service.id.toString()} />
             {/* <ServiceBenefits /> */}
             <ServiceAsk />
             <ServiceDetailsFormQuote />
