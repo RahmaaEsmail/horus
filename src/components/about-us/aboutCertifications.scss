@@ -192,3 +192,12 @@
   }
 }
 
+
+.page_container {
+  padding: 0px 50px;
+
+  @media (max-width:550px) {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+  }
+}

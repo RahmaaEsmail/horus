@@ -35,7 +35,7 @@ const { title, info, counter_data } = hero_content
 const HeroAreaHomeThree = () => {
   return (
     <>
-      <div style={{marginTop:"150px !important"}} className="tp-hero-2-area tp-hero-2-height px-20 fix grey-bg p-relative">
+      <div className="tp-hero-2-area tp-hero-2-height px-20 fix grey-bg p-relative">
         <div className="tp-hero-2-shape-1">
           <Image src={shape_1} alt="image-here" />
         </div>

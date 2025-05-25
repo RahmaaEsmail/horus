@@ -148,4 +148,13 @@
     width: fit-content;
     height: 120px !important;
   }
+}
+.page_container {
+  padding: 0px 50px;
+}
+@media (max-width: 550px) {
+  .page_container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }/*# sourceMappingURL=aboutCertifications.css.map */

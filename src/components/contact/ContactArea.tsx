@@ -109,12 +109,21 @@ const ContactArea = () => {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-12">
-          <div className="tp-map-box">
+      <div className="">
+        <div className="">
+          <div className="tp-map-box" style={{ position: 'relative', width: '100%', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340000003!2d-0.2416814!3d51.5285582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2suk!4v1647881234567!5m2!1sen!2suk"
-              width="600" height="450" style={{ border: 0 }} allowFullScreen={true} loading="lazy"
+              style={{ 
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 0
+              }}
+              allowFullScreen={true}
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade">
             </iframe>
           </div>

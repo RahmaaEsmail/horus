@@ -25,17 +25,22 @@ const HomeThreeOnePage = () => {
         <div id="smooth-content">
           <main>
             <HeroAreaHomeThree />
+            <div className='page_container'>
             <ServiceAreaHomeThree />
             <AboutAreaHomeThree />
+            </div>
             <FunFactAreaHomeThree />
             <FeatureAreaHomeThree />
             {/* <GalleryAreaHomeThree /> */}
+            <div className='page_container'>
             <ProjectAreaHomeOne />
             <TestimonialAreaHomeOne/>
+            </div>
             {/* <TeamAreaHomeThree /> */}
             {/* <ExpartFeatureAreaHomeThree /> */}
             {/* <ProductAreaHomeThree /> */}
             {/* <BlogAreaHomeThree /> */}
+           
             <NewsletterAreaHomeThree />
           </main>
           <FooterThree />

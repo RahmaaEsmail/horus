@@ -16631,6 +16631,11 @@ p.checkout-coupon input[type=text]:focus {
 .breadcrumb__pt {
   padding-top: 90px !important;
 }
+@media (max-width: 970px) {
+  .breadcrumb__pt {
+    padding-top: 100px !important;
+  }
+}
 @media (max-width: 770px) {
   .breadcrumb__pt {
     padding-top: 0px !important;

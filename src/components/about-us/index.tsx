@@ -11,6 +11,7 @@ import FooterThree from '@/layouts/footers/FooterThree';
 import OurTeam from '../OurTeam/OurTeam';
 import PricingArea from '../service/PricingArea';
 import AboutCertifications from './aboutCertifications';
+import './aboutCertifications.scss';
 
 const AboutUs = () => {
   return (
@@ -22,7 +23,7 @@ const AboutUs = () => {
             <Breadcrumb title="About Us" subtitle="About Us" image="/assets/img/breadcurmb/breadcurmb.jpg" />
             <AboutAreaHomeOne style_2={true} />
             <OurTeam/>
-            <FunFactAreaHomeOne style_2={true} />
+=            <FunFactAreaHomeOne style_2={true} />
             <PricingArea />
             <AboutCertifications />
             {/* <TestimonialAreaHomeOne /> */}

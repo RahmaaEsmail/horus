@@ -7,7 +7,7 @@ import React from 'react';
 
 const ServiceAreaHomeThree = () => {
   return (
-    <div id="service-one-page" className="tp-service-area pt-50 pb-80">
+    <div id="service-one-page" className="tp-service-area pt-50 px-20 pb-80">
       <div className="container">
         <div className="row">
           <div className="col-xl-12">

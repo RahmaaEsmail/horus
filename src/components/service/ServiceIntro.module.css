@@ -11,11 +11,15 @@
   flex: 1;
   position: relative;
   min-width: 300px;
+  max-width: 100%;
 }
 
 .heroImage {
   width: 100%;
-  height: 400px;
+  height: auto;
+  min-height: 300px;
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -63,8 +67,9 @@
 
 .heroFeatureBoxes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .featureBox {
@@ -129,20 +134,27 @@
     margin: 0 auto;
   }
 
+  .heroImage {
+    min-height: 250px;
+  }
+
   .heroTextContent {
     text-align: center;
     padding: 0;
+    width: 100%;
   }
 
   .heroFeatureBoxes {
     max-width: 600px;
     margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .featureBox {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -150,9 +162,21 @@
   .heroTitle {
     font-size: 28px;
   }
+
+  .heroFeatureBoxes {
+    grid-template-columns: 1fr;
+  }
+
+  .featureBox {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 576px) {
+  .heroSection {
+    padding: 30px 15px;
+  }
+
   .heroTitle {
     font-size: 24px;
   }
@@ -161,11 +185,26 @@
     font-size: 15px;
   }
 
+  .heroImage {
+    min-height: 200px;
+  }
+
   .goalBox {
     position: relative;
     bottom: auto;
     left: auto;
     margin-top: 15px;
     text-align: center;
+    width: 100%;
+  }
+
+  .featureBox {
+    padding: 12px;
+  }
+
+  .iconCircle {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
 } 
