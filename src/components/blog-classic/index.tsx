@@ -20,7 +20,7 @@ const BlogClassic = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Blogs Classic' subtitle='Blogs Classic' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Blogs Classic' subtitle='Blogs Classic' />
             <BlogArea  setIsVideoOpen={setIsVideoOpen} />
             <ContactAreaHomeOne />
           </main>

@@ -11,7 +11,7 @@ export default function Projects() {
         <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title="Project" subtitle='Projects' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title="Project" subtitle='Projects' />
             <ProjectCards />
             {/* <ProjectArea />
             <ContactAreaHomeOne /> */}

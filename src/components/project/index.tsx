@@ -13,7 +13,7 @@ const Project = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title="Project" subtitle='Project' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title="Project" subtitle='Project' />
             <ProjectArea />
             <ContactAreaHomeOne />
           </main>

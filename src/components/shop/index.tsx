@@ -13,7 +13,7 @@ const Shop = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Shop' subtitle='Shop' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Shop' subtitle='Shop' />
             <ProductArea />
             <ContactAreaHomeOne />
           </main>

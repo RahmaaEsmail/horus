@@ -14,7 +14,7 @@ const BlogDetails = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Blog Details' subtitle='Blog Details' />
+            <Breadcrumb  image="/assets/img/breadcurmb/breadcurmb.jpg" title='Blog Details' subtitle='Blog Details' />
             <BlogDetailsArea />
             <ContactAreaHomeOne />
           </main>

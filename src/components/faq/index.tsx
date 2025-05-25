@@ -14,7 +14,7 @@ const Faq = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='faq' subtitle='faq' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='faq' subtitle='faq' />
             <FaqArea />
             <ContactAreaHomeOne />
           </main>

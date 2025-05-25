@@ -14,7 +14,7 @@ const Cart = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Cart Page' subtitle='Cart Page' /> 
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Cart Page' subtitle='Cart Page' /> 
             <ShoppingBagArea />
             <ContactAreaHomeOne />
           </main>

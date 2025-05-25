@@ -14,7 +14,7 @@ const Price = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title="Pricing" subtitle='Pricing' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title="Pricing" subtitle='Pricing' />
             <PriceArea />
             <ContactAreaHomeOne />
           </main>

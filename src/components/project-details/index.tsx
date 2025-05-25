@@ -24,7 +24,7 @@ const ProjectDetails = ({project_id}: ProjectDetailsProps) => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title={title || ""} subtitle={title || ""} />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title={title || ""} subtitle={title || ""} />
             <ProjectArea project_id={project_id}/>
             <ContactAreaHomeOne />
           </main>

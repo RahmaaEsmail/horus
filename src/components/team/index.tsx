@@ -14,7 +14,7 @@ const Team = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Team' subtitle='Team' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Team' subtitle='Team' />
             <TeamArea />
             <ContactAreaHomeOne />
           </main>

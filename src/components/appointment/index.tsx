@@ -14,7 +14,7 @@ const Appointment = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Appointment' subtitle='Appointment' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Appointment' subtitle='Appointment' />
             <AppointmentArea />
             <ContactAreaHomeOne />
           </main>

@@ -14,7 +14,7 @@ const Checkout = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Checkout' subtitle='Checkout' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Checkout' subtitle='Checkout' />
             <CheckoutArea />
             <ContactAreaHomeOne />
           </main>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Breadcrumb from '../common/Breadcrumb';
 import FooterOne from '@/layouts/footers/FooterOne';
@@ -20,7 +19,7 @@ const AboutUs = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title="About Us" subtitle="About Us" />
+            <Breadcrumb title="About Us" subtitle="About Us" image="/assets/img/breadcurmb/breadcurmb.jpg" />
             <AboutAreaHomeOne style_2={true} />
             <OurTeam/>
             <FunFactAreaHomeOne style_2={true} />

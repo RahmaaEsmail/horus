@@ -12,7 +12,7 @@ export default function index() {
      <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title="Quotes" subtitle="Get A Quote" />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title="Quotes" subtitle="Get A Quote" />
            <div className='services_container'>
           <QuoteForm />
            </div>

@@ -18,7 +18,7 @@ const Error = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Error Page' subtitle='Error Page' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Error Page' subtitle='Error Page' />
             <div className="tp-error-area pt-120 pb-120">
               <div className="container">
                 <div className="row">

@@ -16,7 +16,7 @@ const Contact = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title='Contact Us' subtitle='Contact Us' />
+            <Breadcrumb image="/assets/img/breadcurmb/breadcurmb.jpg" title='Contact Us' subtitle='Contact Us' />
             <ContactArea /> 
             <BrandAreaHomeOne bg_style={true} />
           </main>
