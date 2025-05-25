@@ -29,7 +29,7 @@ const HomeThreeOnePage = () => {
             <AboutAreaHomeThree />
             <FunFactAreaHomeThree />
             <FeatureAreaHomeThree />
-            <GalleryAreaHomeThree />
+            {/* <GalleryAreaHomeThree /> */}
             <ProjectAreaHomeOne />
             <TestimonialAreaHomeOne/>
             {/* <TeamAreaHomeThree /> */}

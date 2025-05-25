@@ -1,6 +1,29 @@
 import Link from "next/link";
 import React from "react";
 
+interface DataType {
+  subtitle: string;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+const about_content: DataType = {
+  subtitle: `About Us`,
+  title: `Your Trusted Construction Partner in London`,
+  description: `Horus Construction Ltd has more than 30 years experience in domestic, commercial and insurance defect works within London and the surrounding areas. We work for both clients directly and architects on behalf of clients, maintaining strong relationships with several architects in London through successful project completions.`,
+  features: [
+    `Specialized in renovations and extensions`,
+    `Expert in loft conversions`,
+    `Accredited EWI installer for external insulation`,
+    `Professional silicone render services`,
+    `Free no-obligation project quotations`,
+    `Architectural and professional referrals available`
+  ]
+}
+
+const { subtitle, title, description, features } = about_content
+
 const AboutAreaHomeThree = () => {
   return (
     <>
@@ -10,10 +33,10 @@ const AboutAreaHomeThree = () => {
             <div className="col-xl-12">
               <div className="tp-about-3-title-box mb-60">
                 <span className="tp-section-subtitle tp-split-text tp-split-in-right">
-                  About Us
+                  {subtitle}
                 </span>
                 <h3 className="tp-section-title tp-split-text tp-split-in-right">
-                  Designing Tomorrow s <br /> ClassclassNameics Today
+                  {title}
                 </h3>
               </div>
             </div>
@@ -40,7 +63,7 @@ const AboutAreaHomeThree = () => {
                   </div>
                 </div>
                 <div className="tp-about-3-big-text d-none d-xl-block">
-                  <h6>About Us</h6>
+                  <h6>{subtitle}</h6>
                 </div>
               </div>
             </div>
@@ -48,10 +71,15 @@ const AboutAreaHomeThree = () => {
               <div className="tp-about-3-right">
                 <div className="tp-about-3-content pb-60">
                   <p className="mb-45">
-                    Nemo design enim ipsam voluptatem quim voluptas sit
-                    aspernatur aut odit auting fugit sed thisnquia consequuntur
-                    magni dolores eos designer heresm qui ratione
+                    {description}
                   </p>
+                  <div className="tp-about-list mb-35">
+                    <ul>
+                      {features.map((feature, index) => (
+                        <li key={index}><i className="fa-light fa-check"></i>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
                   <Link className="tp-btn-black" href="/about-us">
                     <span>Read More</span>
                   </Link>

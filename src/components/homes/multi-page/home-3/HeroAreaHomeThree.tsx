@@ -1,5 +1,3 @@
-
-
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
@@ -14,23 +12,22 @@ import './style.scss';
 
 
 const hero_content = {
-  title: <>Living with <br /> Modern <span>Interior</span> <br /> Concepts</>,
-  info: <>Dolen Son The dolor sit amet, consectetur adipiscing elit. Sed sit amet rhoncus nunc Duis egestas ac ante sed tincidunt. Maecena Dolen</>,
+  title: <>Building Excellence <br /> For Over <span>30 Years</span> <br /> In London</>,
+  info: <>Horus Construction Ltd specializes in domestic, commercial, and insurance defect works. We excel in renovations, extensions, loft conversions, and external insulation as an accredited EWI installer. Let us bring your vision to life.</>,
   counter_data: [
     {
-      count: 40,
-      title: `Winning award`,
+      count: 30,
+      title: `Years Experience`,
+    },
+    {
+      count: 500,
+      title: `Projects Completed`,
     },
     {
       count: 100,
-      title: `Complete project`,
-    },
-    {
-      count: 800,
-      title: `Client reviewt`,
+      title: `Happy Clients`,
     },
   ]
-
 }
 
 const { title, info, counter_data } = hero_content

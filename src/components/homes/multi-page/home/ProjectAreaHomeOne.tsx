@@ -55,7 +55,7 @@ const ProjectAreaHomeOne = () => {
   return (
     <section
       id="project-one-page"
-      className="tp-project-area tp-project-style-2 fix py-80"
+      className="tp-project-area tp-project-style-2 fix pt-80"
     >
       <div className="container">
         <div className="row">
