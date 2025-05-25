@@ -1,5 +1,5 @@
 "use client";
-import React, { JSX, useRef, useState } from "react";
+import React, { JSX, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import project_img_1 from "@/assets/img/project/details1-1.jpg";
@@ -8,6 +8,7 @@ import project_img_3 from "@/assets/img/project/details1-3.jpg";
 
 import "./project-details.scss";
 import SeriveDetailsModal from "../ServiceDetailsModal/SeriveDetailsModal";
+import project_data from "@/data/project_data";
 
 interface DataType {
   address: string;
@@ -40,7 +41,8 @@ const project_content: DataType = {
   ],
 };
 
-const projectData = {
+const projectData = 
+{
   title: "Commercial Office Tower | New Capital | Delivery Q4 2025",
   location: "CBD District, New Administrative Capital, Cairo, Egypt",
   specs: {
@@ -133,10 +135,20 @@ const {
   features,
 } = project_content;
 
-const ProjectArea = () => {
+interface ProjectAreaProps {
+  project_id: number;
+}
+
+const ProjectArea = ({ project_id }: ProjectAreaProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imgList = useRef<HTMLDivElement>(null);
-  const [openModalImg , setOpenModalImg] = useState(false);
+  const [openModalImg, setOpenModalImg] = useState(false);
+  const [filteredData, setFilteredData] = useState<any>(null);
+
+  useEffect(() => {
+    const data = project_data?.find(item => item?.id == project_id);
+    setFilteredData(data);
+  }, [project_id]);
 
   return (
     <div className="tp-project-details-area pt-50 pb-120">
@@ -145,7 +157,7 @@ const ProjectArea = () => {
           <div className="project_images_grid">
             <div>
               <Image
-                src={projectData?.images[0]}
+                src={filteredData?.img}
                 alt="Project Main Image"
                 width={800}
                 height={600}
@@ -153,7 +165,7 @@ const ProjectArea = () => {
             </div>
 
             <div className="last_grid_img">
-              {projectData?.images?.slice(1, 5)?.map((item, index) => (
+              {filteredData?.images?.slice(1, 5)?.map((item: string, index: number) => (
                 <div key={index}>
                   <Image
                     src={item}
@@ -162,7 +174,7 @@ const ProjectArea = () => {
                     height={300}
                   />
                   {index === 3 && projectData?.images?.length > 4 && (
-                    <div onClick={() => setOpenModalImg(true)} className="img_overlay">+{projectData.images.length - 4}</div>
+                    <div onClick={() => setOpenModalImg(true)} className="img_overlay">+{filteredData?.images?.length - 4}</div>
                   )}
                 </div>
               ))}
@@ -171,26 +183,26 @@ const ProjectArea = () => {
 
           <div className="project-content">
             <div>
-              <h3>{projectData?.title}</h3>
-              <p>Location: {projectData?.location}</p>
+              <h3>{filteredData?.title}</h3>
+              <p>Location: {filteredData?.location}</p>
 
               <ul>
-                <li>Floors :{projectData?.specs?.floors}</li>
-                <li>Area :{projectData?.specs?.builtUpArea}</li>
-                <li>Size :{projectData?.specs?.basementLevels}</li>
-                <li>Handover Date :{projectData?.specs?.deliveryDate}</li>
+                <li>Floors :{filteredData?.specs?.floors}</li>
+                <li>Area :{filteredData?.specs?.builtUpArea}</li>
+                <li>Size :{filteredData?.specs?.basementLevels}</li>
+                <li>Handover Date :{filteredData?.specs?.deliveryDate}</li>
               </ul>
             </div>
 
             <div className="project-overview">
               <h4>Project Overview : </h4>
-              <p>{projectData?.overview}</p>
+              <p>{filteredData?.overview}</p>
             </div>
 
             <div className="project-overview">
               <h4>Features : </h4>
               <ul>
-                {projectData?.features?.map((item , index) => (
+                {filteredData?.features?.map((item , index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -199,7 +211,7 @@ const ProjectArea = () => {
             <div className="project-overview">
               <h4>Nearby Land Marks : </h4>
               <ul>
-                {projectData?.nearbyLandmarks?.map((item , index) => (
+                {filteredData?.nearbyLandmarks?.map((item , index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -210,7 +222,7 @@ const ProjectArea = () => {
             <div className="timeline-section">
               <h4 className="section-title">Project Timeline</h4>
               <div className="timeline">
-                {projectData.timeline.map((item, index) => (
+                {filteredData.timeline.map((item, index) => (
                   <div key={index} className="timeline-item">
                     <div className="date">{item.date}</div>
                     <h5 className="title">{item.title}</h5>
@@ -223,7 +235,7 @@ const ProjectArea = () => {
             <div className="outcome-section">
               <h4 className="section-title">Project Outcomes</h4>
               <div className="outcome-grid">
-                {projectData.outcomes.map((item, index) => (
+                {filteredData.outcomes.map((item, index) => (
                   <div key={index} className="outcome-item">
                     <div className="value">{item.value}</div>
                     <div className="label">{item.label}</div>
@@ -235,7 +247,7 @@ const ProjectArea = () => {
         </div>
       </div>
 
-      <SeriveDetailsModal open={openModalImg} setOpen={setOpenModalImg} images={projectData?.images}/>
+      <SeriveDetailsModal open={openModalImg} setOpen={setOpenModalImg} images={filteredData?.images}/>
     </div>
   );
 };

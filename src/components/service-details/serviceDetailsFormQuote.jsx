@@ -32,13 +32,20 @@
 import React from 'react';
 import './service-details.scss';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { FaPhone, FaEnvelope, FaUser, FaPaperclip } from 'react-icons/fa';
 
 export default function ServiceDetailsQuote() {
   return (
     <div className="service-form-quote">
       <div className="quote-form-container">
         {/* Left: Image with overlay */}
-        <div className="quote-form-image">
+        <motion.div 
+          className="quote-form-image"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <Image
             src="https://res.cloudinary.com/dbz6ebekj/image/upload/v1747725562/PCL_-Edmonton_Office_-_July_14_2016-5_xv5l0g.jpg"
             alt="Project Preview"
@@ -46,13 +53,31 @@ export default function ServiceDetailsQuote() {
             className="quote-image"
           />
           <div className="image-overlay">
-            <h3>Plan Your Dream Project</h3>
-            <p>Let us know what you're looking for. Our team is ready to assist you.</p>
+            <motion.h3
+              style={{}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              Plan Your Dream Project
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              Let us know what you're looking for. Our team is ready to assist you.
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right: Form Content */}
-        <div className="quote-form-content">
+        <motion.div 
+          className="quote-form-content"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="form-header">
             <h4>Request a Quote</h4>
             <p>We will get back to you within 24 hours.</p>
@@ -61,10 +86,38 @@ export default function ServiceDetailsQuote() {
           <form className="quote-form">
             <div className="form-group">
               <div className="input-wrapper">
+                <div className="input-icon">
+                  <FaUser />
+                </div>
                 <input type="text" placeholder="Your Name" required />
               </div>
               <div className="input-wrapper">
+                <div className="input-icon">
+                  <FaEnvelope />
+                </div>
                 <input type="email" placeholder="Your Email" required />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <div className="input-wrapper">
+                <div className="input-icon">
+                  <FaPhone />
+                </div>
+                <input type="tel" placeholder="Your Phone" required />
+              </div>
+              <div className="input-wrapper file-upload-wrapper">
+                <div className="input-icon">
+                  <FaPaperclip />
+                </div>
+                <label htmlFor="file-upload" className="custom-file-upload">
+                  <span>Upload Image (Optional)</span>
+                  <input 
+                    type="file" 
+                    id="file-upload" 
+                    accept="image/*"
+                  />
+                </label>
               </div>
             </div>
 
@@ -72,11 +125,15 @@ export default function ServiceDetailsQuote() {
               <textarea placeholder="Your Message" required></textarea>
             </div>
 
-            <button type="submit">
+            <motion.button 
+              type="submit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
               Send Message
-            </button>
+            </motion.button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

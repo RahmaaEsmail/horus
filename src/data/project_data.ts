@@ -1,5 +1,3 @@
-
-
 import { StaticImageData } from "next/image";
 import project_img_1 from "@/assets/img/project/project-6-1.jpg";
 import project_img_2 from "@/assets/img/project/project-6-2.jpg";
@@ -45,27 +43,92 @@ import project_img_27 from "@/assets/img/product/thumb-1-4.jpg";
 
 
 interface DataType {
-  id:number,
-  service:string,
+  id: number;
+  service: string;
   path: string;
   price?: number;
   category?: string | any;
   img: StaticImageData;
   title: string;
   description?: string;
+  images: any;
+  location?: string;
+  specs?: {
+    floors?: number;
+    basementLevels?: number;
+    parkingCapacity?: string;
+    builtUpArea?: string;
+    deliveryDate?: string;
+  };
+  overview?: string;
+  features?: string[];
+  nearbyLandmarks?: string[];
+  timeline?: {
+    date: string;
+    title: string;
+    description: string;
+  }[];
+  outcomes?: {
+    value: string;
+    label: string;
+  }[];
 }
 
 
 const project_data: DataType[] = [
   // 🏢 Commercial Projects
   {
-    id:1,
-    service:"General COntracting",
+    id: 1,
+    service: "General Contracting",
     path: "commercial",
     category: "Office",
     title: "Downtown Corporate Plaza",
     img: project_img_1,
     description: "Modern office space development with energy-efficient design.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Downtown Business District",
+    specs: {
+      floors: 20,
+      basementLevels: 2,
+      parkingCapacity: "200+ cars",
+      builtUpArea: "25,000 sqm",
+      deliveryDate: "Q4 2024"
+    },
+    overview: "A state-of-the-art commercial complex featuring modern office spaces, retail areas, and premium amenities.",
+    features: [
+      "Smart building management system",
+      "Green building certification",
+      "Premium office spaces",
+      "Underground parking",
+      "24/7 security"
+    ],
+    nearbyLandmarks: [
+      "5 minutes to Central Station",
+      "10 minutes to International Airport",
+      "15 minutes to Shopping District"
+    ],
+    timeline: [
+      {
+        date: "January 2023",
+        title: "Project Initiation",
+        description: "Planning and design phase"
+      },
+      {
+        date: "June 2023",
+        title: "Construction Started",
+        description: "Foundation work completed"
+      }
+    ],
+    outcomes: [
+      {
+        value: "20",
+        label: "Total Floors"
+      },
+      {
+        value: "25,000",
+        label: "Built-up Area (sqm)"
+      }
+    ]
   },
   {
     id:2,
@@ -75,6 +138,28 @@ const project_data: DataType[] = [
     title: "Metro Mall Extension",
     img: project_img_2,
     description: "Expansion of a high-traffic retail mall with smart parking.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Metro Business District",
+    specs: {
+      floors: 5,
+      basementLevels: 2,
+      parkingCapacity: "500+ cars",
+      builtUpArea: "50,000 sqm",
+      deliveryDate: "Q2 2024"
+    },
+    overview: "A modern retail expansion project featuring premium shopping spaces and entertainment zones.",
+    features: [
+      "Smart parking system",
+      "Premium retail spaces",
+      "Food court",
+      "Entertainment zone",
+      "24/7 security"
+    ],
+    nearbyLandmarks: [
+      "2 minutes to Metro Station",
+      "5 minutes to Business District",
+      "10 minutes to Residential Area"
+    ]
   },
 
   // 🏠 Residential Projects
@@ -86,6 +171,23 @@ const project_data: DataType[] = [
     title: "Sunset Hills Residences",
     img: project_img_3,
     description: "Luxury villas with private pools and smart home integration.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Sunset Hills District",
+    specs: {
+      floors: 2,
+      basementLevels: 1,
+      parkingCapacity: "4 cars per villa",
+      builtUpArea: "400 sqm per villa",
+      deliveryDate: "Q3 2024"
+    },
+    overview: "Luxury residential development featuring modern villas with premium amenities.",
+    features: [
+      "Smart home integration",
+      "Private pools",
+      "Landscaped gardens",
+      "Security system",
+      "Premium finishes"
+    ]
   },
   {
     id:4,
@@ -95,6 +197,23 @@ const project_data: DataType[] = [
     title: "CityView Apartments",
     img: project_img_4,
     description: "High-rise family apartments with stunning skyline views.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Downtown Area",
+    specs: {
+      floors: 25,
+      basementLevels: 2,
+      parkingCapacity: "300+ cars",
+      builtUpArea: "30,000 sqm",
+      deliveryDate: "Q1 2025"
+    },
+    overview: "Premium high-rise residential project offering panoramic city views.",
+    features: [
+      "Skyline views",
+      "Rooftop amenities",
+      "Fitness center",
+      "Swimming pool",
+      "24/7 concierge"
+    ]
   },
 
   // 🏗️ Industrial Constructions
@@ -106,6 +225,23 @@ const project_data: DataType[] = [
     title: "LogiHub Facility",
     img: project_img_5,
     description: "Advanced warehousing system with automated loading bays.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Industrial Zone",
+    specs: {
+      floors: 1,
+      basementLevels: 0,
+      parkingCapacity: "50+ trucks",
+      builtUpArea: "15,000 sqm",
+      deliveryDate: "Q4 2024"
+    },
+    overview: "State-of-the-art logistics facility with advanced automation systems.",
+    features: [
+      "Automated loading bays",
+      "Smart inventory system",
+      "Security monitoring",
+      "Fire safety systems",
+      "Employee facilities"
+    ]
   },
   {
     id:6,
@@ -115,6 +251,23 @@ const project_data: DataType[] = [
     title: "NovaTech Plant",
     img: project_img_6,
     description: "Turnkey factory project including internal logistics.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Industrial Park",
+    specs: {
+      floors: 2,
+      basementLevels: 1,
+      parkingCapacity: "100+ cars",
+      builtUpArea: "20,000 sqm",
+      deliveryDate: "Q2 2025"
+    },
+    overview: "Modern manufacturing facility with integrated logistics systems.",
+    features: [
+      "Automated production lines",
+      "Quality control labs",
+      "Employee facilities",
+      "Security systems",
+      "Environmental controls"
+    ]
   },
 
   // 🌆 Urban & Mixed Use
@@ -126,6 +279,23 @@ const project_data: DataType[] = [
     title: "Greenbelt Urban Center",
     img: project_img_7,
     description: "Retail, office, and residential combined into one smart zone.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Urban District",
+    specs: {
+      floors: 15,
+      basementLevels: 3,
+      parkingCapacity: "400+ cars",
+      builtUpArea: "45,000 sqm",
+      deliveryDate: "Q3 2025"
+    },
+    overview: "Integrated mixed-use development combining retail, office, and residential spaces.",
+    features: [
+      "Smart building systems",
+      "Green spaces",
+      "Retail zones",
+      "Office spaces",
+      "Residential units"
+    ]
   },
   {
     id:8,
@@ -135,6 +305,23 @@ const project_data: DataType[] = [
     title: "Azure Tower",
     img: project_img_8,
     description: "Iconic skyscraper with luxury residences and rooftop helipad.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Business District",
+    specs: {
+      floors: 40,
+      basementLevels: 4,
+      parkingCapacity: "300+ cars",
+      builtUpArea: "60,000 sqm",
+      deliveryDate: "Q4 2025"
+    },
+    overview: "Iconic skyscraper featuring luxury residences and premium amenities.",
+    features: [
+      "Rooftop helipad",
+      "Luxury residences",
+      "Premium amenities",
+      "Smart systems",
+      "Security features"
+    ]
   },
 
   // 🏕️ Country Retreats
@@ -146,6 +333,23 @@ const project_data: DataType[] = [
     title: "Willow Creek Escape",
     img: project_img_9,
     description: "Nature-based retreat cottages built with local stone & timber.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Countryside",
+    specs: {
+      floors: 2,
+      basementLevels: 0,
+      parkingCapacity: "2 cars per cottage",
+      builtUpArea: "200 sqm per cottage",
+      deliveryDate: "Q1 2025"
+    },
+    overview: "Eco-friendly retreat featuring sustainable cottages in natural surroundings.",
+    features: [
+      "Local materials",
+      "Sustainable design",
+      "Natural landscaping",
+      "Solar power",
+      "Water conservation"
+    ]
   },
   {
     id:10,
@@ -155,6 +359,23 @@ const project_data: DataType[] = [
     title: "Golden Fields Estate",
     img: project_img_10,
     description: "Renovated countryside farmhouses with modern amenities.",
+    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    location: "Rural Area",
+    specs: {
+      floors: 2,
+      basementLevels: 1,
+      parkingCapacity: "3 cars per farmhouse",
+      builtUpArea: "300 sqm per farmhouse",
+      deliveryDate: "Q2 2025"
+    },
+    overview: "Modernized farmhouses combining traditional charm with contemporary comfort.",
+    features: [
+      "Modern amenities",
+      "Traditional architecture",
+      "Landscaped gardens",
+      "Smart home features",
+      "Sustainable systems"
+    ]
   },
 ];
 

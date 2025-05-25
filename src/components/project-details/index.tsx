@@ -17,14 +17,15 @@ interface ProjectDetailsProps {
 const ProjectDetails = ({project_id}: ProjectDetailsProps) => {
   const title  = project_data?.find(item => item?.id == project_id)?.title;
   console.log(title);
+
   return (
     <>
       <HeaderOne onePageHomeThree={true} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Breadcrumb title={title || ''} subtitle={title || ''} />
-            <ProjectArea />
+            <Breadcrumb title={title || ""} subtitle={title || ""} />
+            <ProjectArea project_id={project_id}/>
             <ContactAreaHomeOne />
           </main>
           <FooterThree />

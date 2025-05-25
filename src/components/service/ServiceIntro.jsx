@@ -72,10 +72,10 @@ export default function ServiceIntro() {
         transition={{duration: 0.3, ease: "easeInOut"}} 
         className={styles.heroTextContent}
       >
-        <div className={styles.introLabel}>Our Introduction</div>
-        <h1 className={styles.heroTitle}>Welcome to Our Real Estate & Construction Services</h1>
+        <div className={styles.introLabel}>Our Services</div>
+        <h1 className={styles.heroTitle}>Expert Construction & Renovation Services in London</h1>
         <p className={styles.heroDescription}>
-          We offer end-to-end solutions for residential and commercial projects — from contracting and renovation to interior design and project management.
+          With over 30 years of experience, we specialize in domestic and commercial construction, offering comprehensive solutions from renovations and extensions to specialized EWI installation and silicone render services.
         </p>
   
         <div className={styles.heroFeatureBoxes}>
@@ -84,8 +84,8 @@ export default function ServiceIntro() {
               <FaHammer />
             </div>
             <div className={styles.featureText}>
-              <h4>General Contracting</h4>
-              <p>Full project management from foundation to finish.</p>
+              <h4>Renovations & Extensions</h4>
+              <p>Complete renovation services and custom extensions to transform your space.</p>
             </div>
           </div>
   
@@ -94,8 +94,8 @@ export default function ServiceIntro() {
               <FaHome />
             </div>
             <div className={styles.featureText}>
-              <h4>Property Renovation</h4>
-              <p>Modern upgrades to add value and comfort to your property.</p>
+              <h4>Loft Conversions & EWI</h4>
+              <p>Expert loft conversions and accredited external wall insulation services.</p>
             </div>
           </div>
         </div>

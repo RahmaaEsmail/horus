@@ -1,4 +1,3 @@
-
 'use client'
 import React from 'react';
 import Link from 'next/link';
@@ -23,12 +22,15 @@ interface DataType {
 
 const about_content: DataType = {
   subtitle: `About Us`,
-  title: `Elevate Your Space design Elevate Your Life`,
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rhoncus nunc Duis egestas ac ante sed tincidunt. Maecenas in nisi et arcu vulputat isn aliquam Nullam ut metus purus Suspendisse`,
+  title: `Your Trusted Construction Partner in London`,
+  description: `Horus Construction Ltd has more than 30 years experience in domestic, commercial and insurance defect works within London and the surrounding areas. We work for both clients directly and architects on behalf of clients, maintaining strong relationships with several architects in London through successful project completions.`,
   features: [
-    `It is a Long Established fact a reader designer`,
-    `Many Desktop publishing packages our`,
-    `Something by accident sometimes happy`,
+    `Specialized in renovations and extensions`,
+    `Expert in loft conversions`,
+    `Accredited EWI installer for external insulation`,
+    `Professional silicone render services`,
+    `Free no-obligation project quotations`,
+    `Architectural and professional referrals available`
   ]
 }
 
@@ -96,19 +98,19 @@ const AboutAreaHomeOne = ({ style_2 }: StyleType) => {
 
 
       <section className="about-content">
-  <div className="content-card">
-    <h3>Mission</h3>
-    <p>
-      We are dedicated to redefining excellence in real estate by developing projects that prioritize quality and sustainability, establishing new industry standards.
-    </p>
-  </div>
-  <div className="content-card">
-    <h3>Vision</h3>
-    <p>
-      Our goal is to provide clients with exceptional guidance in finding and choosing their ideal home. With a strong focus on customer care and transparency, our experienced advisors stay on top of market trends to deliver accurate, up-to-date insights.
-    </p>
-  </div>
-</section>
+        <div className="content-card">
+          <h3>Mission</h3>
+          <p>
+            To deliver exceptional construction and renovation services with unwavering commitment to quality, safety, and customer satisfaction. We strive to be the most trusted construction partner in London by combining our 30+ years of experience with innovative solutions and professional expertise.
+          </p>
+        </div>
+        <div className="content-card">
+          <h3>Vision</h3>
+          <p>
+            To be London's leading construction company, known for excellence in renovations, extensions, and specialized services. We aim to continuously expand our network of professional partnerships while maintaining the highest standards of workmanship and customer service, helping clients transform their spaces into exceptional environments.
+          </p>
+        </div>
+      </section>
 
     </>
   );

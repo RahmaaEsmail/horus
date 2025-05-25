@@ -8,39 +8,39 @@ import { motion } from "framer-motion";
 const data = [
   {
     id: 1,
-    question: "What is general contracting in real estate?",
+    question: "What types of construction projects do you handle?",
     answer:
-      "General contracting refers to the complete management of a construction project, including hiring subcontractors, sourcing materials, overseeing timelines, and ensuring regulatory compliance.",
+      "We specialize in domestic and commercial projects, including renovations, extensions, loft conversions, and external wall insulation (EWI) installation. With over 30 years of experience, we handle both direct client projects and work through architects.",
   },
   {
     id: 2,
-    question: "Do I need an interior designer for my home renovation?",
+    question: "Do you provide free quotations for projects?",
     answer:
-      "Hiring an interior designer ensures that your renovation not only looks great but also uses space efficiently and reflects your personal style.",
+      "Yes, we offer personalized no-obligation quotations for all projects. We'll visit your site to discuss your plans and provide a detailed quote based on your specific requirements.",
   },
   {
     id: 3,
-    question: "How long does a typical renovation take?",
+    question: "What is EWI installation and why should I consider it?",
     answer:
-      "Depending on the size and complexity, renovations can take anywhere from a few weeks to several months. A timeline is usually provided after an initial site assessment.",
+      "External Wall Insulation (EWI) is an energy-efficient solution that improves thermal performance and reduces heating costs. As an accredited EWI installer, we provide professional installation with silicone render finishes for enhanced durability and aesthetics.",
   },
   {
     id: 4,
-    question: "Are plumbing and electrical services included in your packages?",
+    question: "How long does a typical loft conversion take?",
     answer:
-      "Yes, we offer complete electrical and plumbing services as part of our renovation and construction packages, performed by certified professionals.",
+      "The duration depends on the complexity and size of the project. A standard loft conversion typically takes 6-8 weeks, but we'll provide a detailed timeline after assessing your specific requirements and property structure.",
   },
   {
     id: 5,
-    question: "What types of properties do you service?",
+    question: "Can you help with planning permission and building regulations?",
     answer:
-      "We work with residential, commercial, and investment properties, including apartments, villas, office buildings, and retail spaces.",
+      "Yes, we can assist with all aspects of planning permission and building regulations. We work closely with architects and can refer you to trusted professionals to help manage these requirements for your project.",
   },
   {
     id: 6,
-    question: "Can I get a quote before starting the project?",
+    question: "What areas do you cover?",
     answer:
-      "Absolutely. We provide free consultations and detailed quotations based on your project requirements and site conditions.",
+      "We primarily work within London and the surrounding areas, serving both residential and commercial clients. Our extensive experience in the region allows us to understand local building regulations and requirements.",
   },
 ];
 
@@ -79,28 +79,17 @@ const rightVariant = {
 
 export default function ServiceFaq() {
   return (
-    <motion.div
-      style={{ overflow: "hidden" }}
+    <div
       className="service-area-container service_faq_conatiner"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      onViewportEnter={() => {
-        document.body.style.overflow = "hidden";
-      }}
-      onViewportLeave={() => {
-        document.body.style.overflow = "auto";
-      }}
     >
-      <motion.div className="service-header" variants={rightVariant}>
+      <div className="service-header">
         <h3 className="service-title">Most asked questions</h3>
         <p>Questions & Answers</p>
-      </motion.div>
+      </div>
 
-      <motion.div className="faq_container_grid">
+      <div className="faq_container_grid">
         {data.map((item, index) => (
-          <motion.div
+          <div
             key={item.id}
             className="faq_card"
             variants={index % 2 === 0 ? leftVariant : rightVariant}
@@ -112,9 +101,9 @@ export default function ServiceFaq() {
               <h3>{item.question}</h3>
               <p>{item.answer}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

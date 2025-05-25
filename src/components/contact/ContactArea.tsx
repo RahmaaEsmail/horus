@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import ContactForm from '../forms/ContactForm';
 import { IoLogoFacebook , IoLogoInstagram, IoLogoLinkedin, IoLogoYoutube } from 'react-icons/io5';
@@ -10,29 +8,29 @@ import Link from 'next/link';
 
 const data = [
   {
-    id:1,
-    icon: <IoLogoInstagram /> ,
-    route:"",
+    id: 1,
+    icon: <IoLogoInstagram />,
+    route: "https://instagram.com/horusconstruction",
   },
   {
-    id:2,
-    icon: <IoLogoLinkedin /> ,
-    route:"",
+    id: 2,
+    icon: <IoLogoLinkedin />,
+    route: "https://linkedin.com/company/horusconstruction",
   },
   {
-    id:3,
-    icon: <IoLogoFacebook /> ,
-    route:"",
+    id: 3,
+    icon: <IoLogoFacebook />,
+    route: "https://facebook.com/horusconstruction",
   },
   {
-    id:4,
-    icon: <IoLogoYoutube /> ,
-    route:"",
+    id: 4,
+    icon: <IoLogoYoutube />,
+    route: "https://youtube.com/horusconstruction",
   },
   {
-    id:5,
-    icon: <FaXTwitter /> ,
-    route:"",
+    id: 5,
+    icon: <FaXTwitter />,
+    route: "https://twitter.com/horusconstruction",
   },
 ]
 
@@ -45,16 +43,14 @@ const ContactArea = () => {
             <div className="row">
               <div className="col-xl-8 col-lg-8 mb-50">
                 <div className="tp-form-box tp-form-box-style-2">
-                  <h4 className="tp-section-title pb-60">Enter You Personal Details</h4>
-
+                  <h4 className="tp-section-title pb-60">Get Your Free Quote</h4>
                   <ContactForm /> 
-
                 </div>
               </div>
               <div className="col-xl-4 col-lg-4 mb-50">
                 <div className="tp-contact-box">
-                  <h4 className="tp-section-title pb-10">Get in touch </h4>
-                  <p className="pb-25">It is a long established fact that a reader will be distrol acted bioiiy desig the rea dablea contentIt is a long established fact that a reader will be </p>
+                  <h4 className="tp-section-title pb-10">Contact Information</h4>
+                  <p className="pb-25">With over 30 years of experience in domestic and commercial construction, we're here to help with your renovation, extension, or construction project.</p>
                   <ul>
                     <li>
                       <div className="tp-contact-item d-flex align-items-center">
@@ -66,9 +62,8 @@ const ContactArea = () => {
                           </span>
                         </div>
                         <div className="tp-contact-content">
-                          <h6>Address</h6>
-                          <a href="https://www.google.com/maps/place/Cumberland+House,+SK,+Canada/@53.6729773,-103.7836571,8z/data=!4m15!1m8!3m7!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!2sCanada!3b1!8m2!3d56.130366!4d-106.346771!16zL20vMGQwNjBn!3m5!1s0x52f917b0cc93e6c1:0x44da1470d37ba724!8m2!3d53.958266!4d-102.267444!16zL20vMDZteWx5?entry=ttu" target="_blank">Dhaka 102, utl 1216, road 45 house
-                            shantighar rahuta, 1213</a>
+                          <h6>Office Location</h6>
+                          <a href="https://www.google.com/maps/search/?api=1&query=London" target="_blank">London and surrounding areas</a>
                         </div>
                       </div>
                     </li>
@@ -83,7 +78,7 @@ const ContactArea = () => {
                         </div>
                         <div className="tp-contact-content">
                           <h6>Email Address</h6>
-                          <a href="mailto:ijmnhhasan000@yourmail.com">ijmnhhasan000@yourmail.com</a>
+                          <a href="mailto:info@horusconstruction.com">info@horusconstruction.com</a>
                         </div>
                       </div>
                     </li>
@@ -97,8 +92,8 @@ const ContactArea = () => {
                           </span>
                         </div>
                         <div className="tp-contact-content">
-                          <h6>Phone number</h6>
-                          <a href="tel:0000000000000">0000-0000-00-000</a>
+                          <h6>Phone Number</h6>
+                          <a href="tel:+447123456789">+44 7123 456 789</a>
                         </div>
                       </div>
                     </li>
@@ -106,7 +101,7 @@ const ContactArea = () => {
                 </div>
 
                 <div className='social_contacts'>
-                 {data?.map(item => <Link href={item?.route} key={item?.id}>{item?.icon}</Link>)}
+                  {data?.map(item => <Link href={item?.route} key={item?.id} target="_blank">{item?.icon}</Link>)}
                 </div>
               </div>
             </div>
@@ -115,16 +110,16 @@ const ContactArea = () => {
       </div>
 
       <div className="row">
-            <div className="col-12">
-              <div className="tp-map-box">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146513.05509247648!2d73.19133525789097!3d54.98596156928781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafde2f601090b%3A0x5eefc33861a69b1a!2z4KaT4Kau4Ka44KeN4KaVLCBPbXNrIE9ibGFzdCwg4Kaw4Ka-4Ka24Ka_4Kav4Ka84Ka-!5e0!3m2!1sbn!2sbd!4v1689181288902!5m2!1sbn!2sbd"
-                  width="600" height="450" style={{ border: 0 }} allowFullScreen={true} loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
-            </div>
+        <div className="col-12">
+          <div className="tp-map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340000003!2d-0.2416814!3d51.5285582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2suk!4v1647881234567!5m2!1sen!2suk"
+              width="600" height="450" style={{ border: 0 }} allowFullScreen={true} loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
+        </div>
+      </div>
     </>
   );
 };

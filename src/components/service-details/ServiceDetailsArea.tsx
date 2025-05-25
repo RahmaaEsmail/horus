@@ -1,94 +1,115 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SeriveDetailsModal from "../ServiceDetailsModal/SeriveDetailsModal";
 import './service-details.scss';
+import { service_data } from "../service/SeerviceArea";
 
 
 interface ServiceDetailsAreaProps {
   serviceId: string | string[];
 }
 
+interface ServiceData {
+  id: number;
+  home: string;
+  img: string;
+  title: string;
+  description: string;
+  images: string[];
+}
+
 // Import the service data
-const service_data = [
-  {
-    id: 1,
-    home: "service",
-    img: "https://www.pcl.com/content/dam/people-working/fpz_20200807_1424.jpg",
-    title: "General Contracting",
-    description:
-      "We oversee the entire construction process from start to finish, including planning, coordination, subcontractor management, materials, and compliance.",
-  },
-  {
-    id: 2,
-    home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728183/download_1_gfztxy.jpg",
-    title: "Interior Design & Decoration",
-    description:
-      "We transform interior spaces with personalized design and decoration plans that combine aesthetics and functionality.",
-  },
-  {
-    id: 3,
-    home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728177/images_1_uek7q6.jpg",
-    title: "Painting & Finishing",
-    description:
-      "Our team provides expert painting services and high-quality finishes that protect and beautify your property.",
-  },
-  {
-    id: 4,
-    home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728184/images_zdlngb.jpg",
-    title: "Renovation & Extensions",
-    description:
-      "From small updates to large extensions, we help upgrade your property to better suit your needs and lifestyle.",
-  },
-  {
-    id: 5,
-    home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728286/download_2_uhbysa.jpg",
-    title: "Electrical & Plumbing Works",
-    description:
-      "We deliver reliable electrical and plumbing services that meet all safety standards and project requirements.",
-  },
-];
+// const service_data = [
+//   {
+//     id: 1,
+//     home: "service",
+//     img: "https://www.pcl.com/content/dam/people-working/fpz_20200807_1424.jpg",
+//     title: "General Contracting",
+//     description:
+//       "We oversee the entire construction process from start to finish, including planning, coordination, subcontractor management, materials, and compliance.",
+//   },
+//   {
+//     id: 2,
+//     home: "service",
+//     img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728183/download_1_gfztxy.jpg",
+//     title: "Interior Design & Decoration",
+//     description:
+//       "We transform interior spaces with personalized design and decoration plans that combine aesthetics and functionality.",
+//   },
+//   {
+//     id: 3,
+//     home: "service",
+//     img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728177/images_1_uek7q6.jpg",
+//     title: "Painting & Finishing",
+//     description:
+//       "Our team provides expert painting services and high-quality finishes that protect and beautify your property.",
+//   },
+//   {
+//     id: 4,
+//     home: "service",
+//     img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728184/images_zdlngb.jpg",
+//     title: "Renovation & Extensions",
+//     description:
+//       "From small updates to large extensions, we help upgrade your property to better suit your needs and lifestyle.",
+//   },
+//   {
+//     id: 5,
+//     home: "service",
+//     img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728286/download_2_uhbysa.jpg",
+//     title: "Electrical & Plumbing Works",
+//     description:
+//       "We deliver reliable electrical and plumbing services that meet all safety standards and project requirements.",
+//   },
+// ];
 
 const ServiceDetailsArea: React.FC<ServiceDetailsAreaProps> = ({ serviceId }) => {
   const [openGalleryModal, setOpenGalleryModal] = useState(false);
-  
+  const [filteredData, setFilteredData] = useState<ServiceData | null>(null);
   const service = service_data.find(item => item.id === Number(serviceId));
 
   if (!service) {
     return <div>Service not found</div>;
   }
-  console.log(service);
+
+  useEffect(() => {
+    const finalData = service_data?.find(item => item?.id === Number(serviceId));
+    console.log(finalData);
+    if (finalData) {
+      setFilteredData(finalData as ServiceData);
+    }
+  }, [serviceId]);
+
+  if (!filteredData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="service-details">
-      <h3 className="main-service-detail-title">{service?.title}</h3>
-      <p className="main-service-detail-desc">{service?.description}</p>
+      <h3 className="main-service-detail-title">{filteredData?.title}</h3>
+      <p className="main-service-detail-desc">{filteredData?.description}</p>
 
       <div className="gallery-section">
   
         <div className="gallery-grid">
           <div className="main-image">
-            <Image src={service.img} alt={service.title} width={700} height={350} />
+            <Image src={filteredData?.img} alt={service.title} width={700} height={350} />
           </div>
           <div className="thumbnail-grid">
-            {service_data.slice(0, 4).map((item, i) => (
-              <div key={item.id} className="thumbnail">
+            {filteredData?.images?.slice(0, 4).map((item, i) => (
+              <div key={i} className="thumbnail">
                 <Image
-                  src={item.img}
-                  alt={item.title}
+                  src={item}
+                  alt={"image"}
                   width={100}
                   height={100}
                 />
-                {i === 3 && service_data.length > 4 && (
+                {i === 3 && filteredData?.images && filteredData?.images.length > 4 && (
                   <div
                     className="overlay"
                     onClick={() => setOpenGalleryModal(true)}
                   >
-                    +{service_data.length - 4}
+                    +{filteredData?.images?.length - 4}
                   </div>
                 )}
               </div>
@@ -100,7 +121,7 @@ const ServiceDetailsArea: React.FC<ServiceDetailsAreaProps> = ({ serviceId }) =>
       <SeriveDetailsModal
         open={openGalleryModal}
         setOpen={setOpenGalleryModal}
-        images={service_data.map(item => ({ id: item.id, img: item.img }))}
+        images={filteredData?.images}
       />
     </section>
   );

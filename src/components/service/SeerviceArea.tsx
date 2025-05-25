@@ -8,47 +8,92 @@ import { useRouter } from "next/navigation";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { motion } from "framer-motion";
 
-const service_data = [
+export const service_data = [
   {
     id: 1,
     home: "service",
-    img: "https://www.pcl.com/content/dam/people-working/fpz_20200807_1424.jpg",
+    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161051/3_rjdfo6.png",
     title: "General Contracting",
     description:
       "We oversee the entire construction process from start to finish, including planning, coordination, subcontractor management, materials, and compliance.",
+      images:[
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161047/1_ko5bot.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161051/3_rjdfo6.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161056/2_buu26p.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161055/4_ervwfv.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161066/5_xfh1lu.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161057/6_ixdyp3.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161054/7_s7cgmd.png"
+      ]
   },
   {
     id: 2,
     home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728183/download_1_gfztxy.jpg",
+    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161050/Interior_Design_Decoration_llnoqt.png",
     title: "Interior Design & Decoration",
     description:
       "We transform interior spaces with personalized design and decoration plans that combine aesthetics and functionality.",
-  },
+  images:[
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161059/9_ipdfrq.png",
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161064/10_x2will.png",
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161065/12_ftenf8.png",
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161067/11_ehbeg8.png",
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161067/13_k31fxf.png",
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748160999/19_orzsjm.png",
+    "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748160981/18_q3uaq2.png"
+  ]
+    },
   {
     id: 3,
     home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728177/images_1_uek7q6.jpg",
+    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
     title: "Painting & Finishing",
     description:
       "Our team provides expert painting services and high-quality finishes that protect and beautify your property.",
-  },
+      images:[
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161043/25_qqdv1r.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161049/Painting_Finishing_syghp3.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748161058/24_nfipkf.png",
+        'https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163015/34_yrcg40.png',
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/33_ycprnt.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163016/29_ga13pb.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163016/28_ghswfc.png",
+        "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163024/31_zg8z06.png",
+
+      ]
+    },
   {
     id: 4,
     home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728184/images_zdlngb.jpg",
+    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163314/45_y1uiqe.png",
     title: "Renovation & Extensions",
     description:
       "From small updates to large extensions, we help upgrade your property to better suit your needs and lifestyle.",
-  },
+    images:["https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163312/46_xgcuyy.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163311/38_omgrih.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163303/42_stv9e5.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163298/39_deefma.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163295/40_rgjcqt.png",
+    ]
+    },
   {
     id: 5,
     home: "service",
-    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1747728286/download_2_uhbysa.jpg",
+    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163518/50_li2sbt.png",
     title: "Electrical & Plumbing Works",
     description:
       "We deliver reliable electrical and plumbing services that meet all safety standards and project requirements.",
-  },
+    images:[
+      'https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163520/48_k9tblc.png',
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/49_cbntng.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163314/45_y1uiqe.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163312/46_xgcuyy.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163311/38_omgrih.png",
+    ]
+    },
 ];
 
 // Define animation variants
