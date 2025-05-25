@@ -1,0 +1,151 @@
+.certifications-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  padding-top: 30px;
+  border-top: 1px solid lightgray;
+}
+.certifications-section .certifications-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+.certifications-section .certifications-header .section-subtitle {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(146, 101, 188, 0.1);
+  color: var(--tp-theme-1);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.certifications-section .certifications-header .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--tp-theme-1);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.certifications-section .certifications-header .section-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+.certifications-section .certifications-slider {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.certifications-section .certifications-slider .certifications-swiper {
+  padding: 0px 10px;
+}
+.certifications-section .certifications-slider .certification-slide {
+  height: auto;
+}
+.certifications-section .certifications-slider .certification-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.certifications-section .certifications-slider .certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+.certifications-section .certifications-slider .certification-card .certification-image {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.certifications-section .certifications-slider .certification-card .certification-image .cert-img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 15px !important;
+  transition: transform 0.3s ease;
+}
+.certifications-section .certifications-slider .certification-card .certification-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--tp-theme-1);
+  margin-bottom: 10px;
+}
+.certifications-section .certifications-slider .certification-card .certification-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+:global .swiper-button-next,
+:global .swiper-button-prev {
+  color: var(--tp-theme-1);
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+:global .swiper-button-next::after,
+:global .swiper-button-prev::after {
+  font-size: 18px;
+}
+:global .swiper-button-next:hover,
+:global .swiper-button-prev:hover {
+  background: var(--tp-theme-1);
+  color: white;
+}
+:global .swiper-pagination-bullet {
+  background: var(--tp-theme-1);
+  opacity: 0.5;
+}
+:global .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .certifications-section .certifications-header .section-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 60px 20px;
+  }
+  .certifications-section .certifications-header .section-title {
+    font-size: 28px;
+  }
+  .certifications-section .certifications-header .section-description {
+    font-size: 15px;
+  }
+  .certifications-section .certifications-slider .certification-card {
+    padding: 20px;
+  }
+  .certifications-section .certifications-slider .certification-card .certification-image {
+    width: 100px;
+    height: 100px;
+  }
+  .certifications-section .certifications-slider .certification-card .certification-content h3 {
+    font-size: 16px;
+  }
+  .certifications-section .certifications-slider .certification-card .certification-content p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 639px) {
+  .certification-slide {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 120px !important;
+  }
+}/*# sourceMappingURL=aboutCertifications.css.map */

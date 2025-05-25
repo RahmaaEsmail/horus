@@ -1,0 +1,21 @@
+/* transform */
+:root {
+  /**
+  @font family declaration
+  */
+  --tp-ff-body: 'Montserrat', sans-serif;
+  --tp-ff-heading: 'Montserrat', sans-serif;
+  --tp-ff-satisfy: 'Satisfy', cursive;
+  --tp-ff-poppins: 'Poppins', sans-serif;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --tp-common-white: #fff;
+  --tp-common-black: #3d4c7d;
+  --tp-common-black-2: #0D0D0D;
+  --tp-grey-1: #F8F8F8;
+  --tp-text-body: #54595F;
+  --tp-theme-1: #9265bc;
+  --tp-theme-2: #3d4c7d;
+}/*# sourceMappingURL=index.css.map */

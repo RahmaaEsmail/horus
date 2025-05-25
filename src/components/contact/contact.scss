@@ -1,0 +1,30 @@
+.social_contacts {
+    display: flex;
+    gap: 15px;
+    width: fit-content !important;
+    margin: 25px 0px;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--tp-theme-2);
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        svg {
+            color: #ffffff;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s ease;
+        }
+    }
+}

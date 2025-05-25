@@ -1,0 +1,26 @@
+
+@forward 'theme';
+@forward 'components';
+@forward 'layout';
+
+.tp-contact-icon-2 {
+    span {
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+    }
+}
+
+
+.breadcrumb__pt {
+    padding-top: 20px !important;
+
+    @media (max-width:770px) {
+        padding-top: 0px !important;
+    }
+}
+
+#smooth-wrapper {
+    margin-top: 0px !important;
+}
+
