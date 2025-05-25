@@ -150,6 +150,10 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
     setFilteredData(data);
   }, [project_id]);
 
+  useEffect(() => {
+    console.log(filteredData)
+  } , [filteredData])
+
   return (
     <div className="tp-project-details-area pt-50 pb-120">
       <div className="project-details-container">

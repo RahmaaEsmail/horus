@@ -9,7 +9,6 @@ import project_img_5 from "@/assets/img/project/project-2-1.jpg";
 import project_img_6 from "@/assets/img/project/project-2-2.jpg";
 import project_img_7 from "@/assets/img/project/project-2-3.jpg";
 
-
 // home 3
 import project_img_8 from "@/assets/img/project/project-3-1.jpg";
 import project_img_9 from "@/assets/img/project/project-3-2.jpg";
@@ -24,7 +23,7 @@ import project_img_15 from "@/assets/img/project/project-5-3.jpg";
 import project_img_16 from "@/assets/img/project/project-5-4.jpg";
 import project_img_17 from "@/assets/img/project/project-5-5.jpg";
 
-// project 
+// project
 import project_img_18 from "@/assets/img/project/project-4-1.jpg";
 import project_img_19 from "@/assets/img/project/project-4-2.jpg";
 import project_img_20 from "@/assets/img/project/project-4-3.jpg";
@@ -32,15 +31,11 @@ import project_img_21 from "@/assets/img/project/project-4-4.jpg";
 import project_img_22 from "@/assets/img/project/project-4-5.jpg";
 import project_img_23 from "@/assets/img/project/project-4-6.jpg";
 
-// shop details 
+// shop details
 import project_img_24 from "@/assets/img/product/thumb-1-1.jpg";
 import project_img_25 from "@/assets/img/product/thumb-1-2.jpg";
 import project_img_26 from "@/assets/img/product/thumb-1-3.jpg";
 import project_img_27 from "@/assets/img/product/thumb-1-4.jpg";
-
-
-
-
 
 interface DataType {
   id: number;
@@ -74,7 +69,6 @@ interface DataType {
   }[];
 }
 
-
 const project_data: DataType[] = [
   // 🏢 Commercial Projects
   {
@@ -84,300 +78,373 @@ const project_data: DataType[] = [
     category: "Office",
     title: "Downtown Corporate Plaza",
     img: project_img_1,
-    description: "Modern office space development with energy-efficient design.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    description:
+      "Modern office space development with energy-efficient design.",
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Downtown Business District",
     specs: {
       floors: 20,
       basementLevels: 2,
       parkingCapacity: "200+ cars",
       builtUpArea: "25,000 sqm",
-      deliveryDate: "Q4 2024"
+      deliveryDate: "Q4 2024",
     },
-    overview: "A state-of-the-art commercial complex featuring modern office spaces, retail areas, and premium amenities.",
+    overview:
+      "A state-of-the-art commercial complex featuring modern office spaces, retail areas, and premium amenities.",
     features: [
       "Smart building management system",
       "Green building certification",
       "Premium office spaces",
       "Underground parking",
-      "24/7 security"
+      "24/7 security",
     ],
     nearbyLandmarks: [
       "5 minutes to Central Station",
       "10 minutes to International Airport",
-      "15 minutes to Shopping District"
+      "15 minutes to Shopping District",
     ],
     timeline: [
       {
         date: "January 2023",
         title: "Project Initiation",
-        description: "Planning and design phase"
+        description: "Planning and design phase",
       },
       {
         date: "June 2023",
         title: "Construction Started",
-        description: "Foundation work completed"
-      }
+        description: "Foundation work completed",
+      },
     ],
     outcomes: [
       {
         value: "20",
-        label: "Total Floors"
+        label: "Total Floors",
       },
       {
         value: "25,000",
-        label: "Built-up Area (sqm)"
-      }
-    ]
+        label: "Built-up Area (sqm)",
+      },
+    ],
   },
   {
-    id:2,
-    service:"Interior Design & Decoration",
+    id: 2,
+    service: "Interior Design & Decoration",
     path: "commercial",
     category: "Retail",
     title: "Metro Mall Extension",
     img: project_img_2,
     description: "Expansion of a high-traffic retail mall with smart parking.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Metro Business District",
     specs: {
       floors: 5,
       basementLevels: 2,
       parkingCapacity: "500+ cars",
       builtUpArea: "50,000 sqm",
-      deliveryDate: "Q2 2024"
+      deliveryDate: "Q2 2024",
     },
-    overview: "A modern retail expansion project featuring premium shopping spaces and entertainment zones.",
+    overview:
+      "A modern retail expansion project featuring premium shopping spaces and entertainment zones.",
     features: [
       "Smart parking system",
       "Premium retail spaces",
       "Food court",
       "Entertainment zone",
-      "24/7 security"
+      "24/7 security",
     ],
     nearbyLandmarks: [
       "2 minutes to Metro Station",
       "5 minutes to Business District",
-      "10 minutes to Residential Area"
-    ]
+      "10 minutes to Residential Area",
+    ],
   },
 
   // 🏠 Residential Projects
   {
-    id:3,
-    service:"Painting & Finishing",
+    id: 3,
+    service: "Painting & Finishing",
     path: "residential",
     category: "Villas",
     title: "Sunset Hills Residences",
     img: project_img_3,
     description: "Luxury villas with private pools and smart home integration.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Sunset Hills District",
     specs: {
       floors: 2,
       basementLevels: 1,
       parkingCapacity: "4 cars per villa",
       builtUpArea: "400 sqm per villa",
-      deliveryDate: "Q3 2024"
+      deliveryDate: "Q3 2024",
     },
-    overview: "Luxury residential development featuring modern villas with premium amenities.",
+    overview:
+      "Luxury residential development featuring modern villas with premium amenities.",
     features: [
       "Smart home integration",
       "Private pools",
       "Landscaped gardens",
       "Security system",
-      "Premium finishes"
-    ]
+      "Premium finishes",
+    ],
   },
   {
-    id:4,
-    service:"Renovation & Extensions",
+    id: 4,
+    service: "Renovation & Extensions",
     path: "residential",
     category: "Apartments",
     title: "CityView Apartments",
     img: project_img_4,
     description: "High-rise family apartments with stunning skyline views.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Downtown Area",
     specs: {
       floors: 25,
       basementLevels: 2,
       parkingCapacity: "300+ cars",
       builtUpArea: "30,000 sqm",
-      deliveryDate: "Q1 2025"
+      deliveryDate: "Q1 2025",
     },
-    overview: "Premium high-rise residential project offering panoramic city views.",
+    overview:
+      "Premium high-rise residential project offering panoramic city views.",
     features: [
       "Skyline views",
       "Rooftop amenities",
       "Fitness center",
       "Swimming pool",
-      "24/7 concierge"
-    ]
+      "24/7 concierge",
+    ],
   },
 
   // 🏗️ Industrial Constructions
   {
-    id:5,
-    service:"Electerical & Plumbing Work",
+    id: 5,
+    service: "Electerical & Plumbing Work",
     path: "industrial",
     category: "Warehouse",
     title: "LogiHub Facility",
     img: project_img_5,
     description: "Advanced warehousing system with automated loading bays.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Industrial Zone",
     specs: {
       floors: 1,
       basementLevels: 0,
       parkingCapacity: "50+ trucks",
       builtUpArea: "15,000 sqm",
-      deliveryDate: "Q4 2024"
+      deliveryDate: "Q4 2024",
     },
-    overview: "State-of-the-art logistics facility with advanced automation systems.",
+    overview:
+      "State-of-the-art logistics facility with advanced automation systems.",
     features: [
       "Automated loading bays",
       "Smart inventory system",
       "Security monitoring",
       "Fire safety systems",
-      "Employee facilities"
-    ]
+      "Employee facilities",
+    ],
   },
   {
-    id:6,
-    service:"General COntracting",
+    id: 6,
+    service: "General COntracting",
     path: "industrial",
     category: "Manufacturing",
     title: "NovaTech Plant",
     img: project_img_6,
     description: "Turnkey factory project including internal logistics.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Industrial Park",
     specs: {
       floors: 2,
       basementLevels: 1,
       parkingCapacity: "100+ cars",
       builtUpArea: "20,000 sqm",
-      deliveryDate: "Q2 2025"
+      deliveryDate: "Q2 2025",
     },
-    overview: "Modern manufacturing facility with integrated logistics systems.",
+    overview:
+      "Modern manufacturing facility with integrated logistics systems.",
     features: [
       "Automated production lines",
       "Quality control labs",
       "Employee facilities",
       "Security systems",
-      "Environmental controls"
-    ]
+      "Environmental controls",
+    ],
   },
 
   // 🌆 Urban & Mixed Use
   {
-    id:7,
-    service:"Electerical & Plumbing Work",
+    id: 7,
+    service: "Electerical & Plumbing Work",
     path: "urban",
     category: "Mixed Use",
     title: "Greenbelt Urban Center",
     img: project_img_7,
-    description: "Retail, office, and residential combined into one smart zone.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    description:
+      "Retail, office, and residential combined into one smart zone.",
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Urban District",
     specs: {
       floors: 15,
       basementLevels: 3,
       parkingCapacity: "400+ cars",
       builtUpArea: "45,000 sqm",
-      deliveryDate: "Q3 2025"
+      deliveryDate: "Q3 2025",
     },
-    overview: "Integrated mixed-use development combining retail, office, and residential spaces.",
+    overview:
+      "Integrated mixed-use development combining retail, office, and residential spaces.",
     features: [
       "Smart building systems",
       "Green spaces",
       "Retail zones",
       "Office spaces",
-      "Residential units"
-    ]
+      "Residential units",
+    ],
   },
   {
-    id:8,
-    service:"Renovation & Extensions",
+    id: 8,
+    service: "Renovation & Extensions",
     path: "urban",
     category: "Skyscraper",
     title: "Azure Tower",
     img: project_img_8,
-    description: "Iconic skyscraper with luxury residences and rooftop helipad.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    description:
+      "Iconic skyscraper with luxury residences and rooftop helipad.",
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Business District",
     specs: {
       floors: 40,
       basementLevels: 4,
       parkingCapacity: "300+ cars",
       builtUpArea: "60,000 sqm",
-      deliveryDate: "Q4 2025"
+      deliveryDate: "Q4 2025",
     },
-    overview: "Iconic skyscraper featuring luxury residences and premium amenities.",
+    overview:
+      "Iconic skyscraper featuring luxury residences and premium amenities.",
     features: [
       "Rooftop helipad",
       "Luxury residences",
       "Premium amenities",
       "Smart systems",
-      "Security features"
-    ]
+      "Security features",
+    ],
   },
 
   // 🏕️ Country Retreats
   {
-    id:9,
-    service:"Painting & Finishing",
+    id: 9,
+    service: "Painting & Finishing",
     path: "country",
     category: "Cottages",
     title: "Willow Creek Escape",
     img: project_img_9,
-    description: "Nature-based retreat cottages built with local stone & timber.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    description:
+      "Nature-based retreat cottages built with local stone & timber.",
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Countryside",
     specs: {
       floors: 2,
       basementLevels: 0,
       parkingCapacity: "2 cars per cottage",
       builtUpArea: "200 sqm per cottage",
-      deliveryDate: "Q1 2025"
+      deliveryDate: "Q1 2025",
     },
-    overview: "Eco-friendly retreat featuring sustainable cottages in natural surroundings.",
+    overview:
+      "Eco-friendly retreat featuring sustainable cottages in natural surroundings.",
     features: [
       "Local materials",
       "Sustainable design",
       "Natural landscaping",
       "Solar power",
-      "Water conservation"
-    ]
+      "Water conservation",
+    ],
   },
   {
-    id:10,
-    service:"Interior Design & Decoration",
+    id: 10,
+    service: "Interior Design & Decoration",
     path: "country",
     category: "Farmhouses",
     title: "Golden Fields Estate",
     img: project_img_10,
     description: "Renovated countryside farmhouses with modern amenities.",
-    images: [project_img_1, project_img_2, project_img_3 , project_img_1,project_img_13],
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163516/51_gn5y1c.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/41_yuq7ub.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163306/44_rqxx1w.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163022/35_opgm3g.png",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748163021/27_b9fhgv.png",
+    ],
     location: "Rural Area",
     specs: {
       floors: 2,
       basementLevels: 1,
       parkingCapacity: "3 cars per farmhouse",
       builtUpArea: "300 sqm per farmhouse",
-      deliveryDate: "Q2 2025"
+      deliveryDate: "Q2 2025",
     },
-    overview: "Modernized farmhouses combining traditional charm with contemporary comfort.",
+    overview:
+      "Modernized farmhouses combining traditional charm with contemporary comfort.",
     features: [
       "Modern amenities",
       "Traditional architecture",
       "Landscaped gardens",
       "Smart home features",
-      "Sustainable systems"
-    ]
+      "Sustainable systems",
+    ],
   },
 ];
 
-
-export default project_data
+export default project_data;
