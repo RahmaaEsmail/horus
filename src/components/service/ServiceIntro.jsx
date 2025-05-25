@@ -61,7 +61,7 @@ export default function ServiceIntro() {
         />
         <div className={styles.goalBox}>
           <strong>OUR GOAL:</strong><br />
-          "Building better spaces, one project at a time."
+          &ldquo;Building better spaces, one project at a time.&rdquo;
         </div>
       </motion.div>
   

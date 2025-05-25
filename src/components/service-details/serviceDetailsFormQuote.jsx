@@ -66,7 +66,7 @@ export default function ServiceDetailsQuote() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Let us know what you're looking for. Our team is ready to assist you.
+              Let us know what you are looking for. Our team is ready to assist you.
             </motion.p>
           </div>
         </motion.div>

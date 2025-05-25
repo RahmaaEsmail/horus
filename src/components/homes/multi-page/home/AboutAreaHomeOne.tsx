@@ -107,7 +107,7 @@ const AboutAreaHomeOne = ({ style_2 }: StyleType) => {
         <div className="content-card">
           <h3>Vision</h3>
           <p>
-            To be London's leading construction company, known for excellence in renovations, extensions, and specialized services. We aim to continuously expand our network of professional partnerships while maintaining the highest standards of workmanship and customer service, helping clients transform their spaces into exceptional environments.
+            To be London&apos;s leading construction company, known for excellence in renovations, extensions, and specialized services. We aim to continuously expand our network of professional partnerships while maintaining the highest standards of workmanship and customer service, helping clients transform their spaces into exceptional environments.
           </p>
         </div>
       </section>

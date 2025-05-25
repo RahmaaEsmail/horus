@@ -50,7 +50,7 @@ const ContactArea = () => {
               <div className="col-xl-4 col-lg-4 mb-50">
                 <div className="tp-contact-box">
                   <h4 className="tp-section-title pb-10">Contact Information</h4>
-                  <p className="pb-25">With over 30 years of experience in domestic and commercial construction, we're here to help with your renovation, extension, or construction project.</p>
+                  <p className="pb-25">With over 30 years of experience in domestic and commercial construction, we&apos;re here to help with your renovation, extension, or construction project.</p>
                   <ul>
                     <li>
                       <div className="tp-contact-item d-flex align-items-center">
