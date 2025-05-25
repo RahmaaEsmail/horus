@@ -68,9 +68,6 @@ const ServiceDetailsArea: React.FC<ServiceDetailsAreaProps> = ({ serviceId }) =>
   const [filteredData, setFilteredData] = useState<ServiceData | null>(null);
   const service = service_data.find(item => item.id === Number(serviceId));
 
-  if (!service) {
-    return <div>Service not found</div>;
-  }
 
   useEffect(() => {
     const finalData = service_data?.find(item => item?.id === Number(serviceId));
@@ -79,6 +76,11 @@ const ServiceDetailsArea: React.FC<ServiceDetailsAreaProps> = ({ serviceId }) =>
       setFilteredData(finalData as ServiceData);
     }
   }, [serviceId]);
+
+  
+  if (!service) {
+    return <div>Service not found</div>;
+  }
 
   if (!filteredData) {
     return <div>Loading...</div>;

@@ -202,7 +202,7 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
             <div className="project-overview">
               <h4>Features : </h4>
               <ul>
-                {filteredData?.features?.map((item , index) => (
+                {filteredData?.features?.map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -211,7 +211,7 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
             <div className="project-overview">
               <h4>Nearby Land Marks : </h4>
               <ul>
-                {filteredData?.nearbyLandmarks?.map((item , index) => (
+                {filteredData?.nearbyLandmarks?.map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -222,7 +222,7 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
             <div className="timeline-section">
               <h4 className="section-title">Project Timeline</h4>
               <div className="timeline">
-                {filteredData.timeline.map((item, index) => (
+                {filteredData?.timeline?.map((item: { date: string; title: string; description: string }, index: number) => (
                   <div key={index} className="timeline-item">
                     <div className="date">{item.date}</div>
                     <h5 className="title">{item.title}</h5>
@@ -235,7 +235,7 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
             <div className="outcome-section">
               <h4 className="section-title">Project Outcomes</h4>
               <div className="outcome-grid">
-                {filteredData.outcomes.map((item, index) => (
+                {filteredData?.outcomes?.map((item: { value: string; label: string }, index: number) => (
                   <div key={index} className="outcome-item">
                     <div className="value">{item.value}</div>
                     <div className="label">{item.label}</div>
