@@ -28,8 +28,9 @@ interface ServiceData {
 const ServiceDetails: React.FC<ServiceDetailsProps> = ({ serviceId }) => {
   const [filteredData, setFilteredData] = useState<ServiceData | null>(null);
   const service = service_data.find(item => item.id === Number(serviceId));
-
-
+   
+  console.log(serviceId);
+  
   useEffect(() => {
     const finalData = service_data?.find(item => item?.id === Number(serviceId));
     console.log(finalData);
