@@ -16,7 +16,9 @@ export default function ProjectCards() {
   const groupedServices = Array.from(
     new Set(project_data?.map((item) => item?.service))
   );
-  const groupedCategories = Array.from(new Set(project_data?.map(item => item?.category)));
+  const groupedCategories = Array.from(
+    new Set(project_data?.map((item) => item?.category))
+  );
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -25,47 +27,54 @@ export default function ProjectCards() {
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
- 
+
   const handleServiceChange = (service) => {
-    setSelectedServices(prev => {
-      if(prev?.includes(service)) {
-        return prev?.filter(item => item !== service)
+    setSelectedServices((prev) => {
+      if (prev?.includes(service)) {
+        return prev?.filter((item) => item !== service);
       }
-      return ([...prev, service])
-    })
-  }
+      return [...prev, service];
+    });
+  };
 
   const handleTypeChange = (type) => {
-    setSelectedTypes(prev => {
-      if(prev?.includes(type)) {
-        return prev?.filter(item => item !== type)
+    setSelectedTypes((prev) => {
+      if (prev?.includes(type)) {
+        return prev?.filter((item) => item !== type);
       }
-      return ([...prev, type])
-    })
-  }
+      return [...prev, type];
+    });
+  };
 
   const filteredProjects = project_data.filter((item) => {
-    const serviceMatch = selectedServices.length === 0 || selectedServices.includes(item.service);
-    const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(item.category);
+    const serviceMatch =
+      selectedServices.length === 0 || selectedServices.includes(item.service);
+    const typeMatch =
+      selectedTypes.length === 0 || selectedTypes.includes(item.category);
     return serviceMatch && typeMatch;
   });
+
+  console.log(filteredProjects)
 
   return (
     <div className="projects-container">
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         <FaFilter />
       </button>
-      
-      <div className={`sidebar-overlay ${isSidebarOpen ? 'active' : ''}`} onClick={closeSidebar} />
-      
+
+      <div
+        className={`sidebar-overlay ${isSidebarOpen ? "active" : ""}`}
+        onClick={closeSidebar}
+      />
+
       <div className="projects-grid">
-        <div className={`projects-sidebar ${isSidebarOpen ? 'active' : ''}`}>
+        <div className={`projects-sidebar ${isSidebarOpen ? "active" : ""}`}>
           <div className="project-services">
             <h3>Services</h3>
             <ul>
               {groupedServices?.map((item) => (
                 <div key={item} className="checkbox-service">
-                  <input 
+                  <input
                     id={`service-${item}`}
                     type="checkbox"
                     checked={selectedServices.includes(item)}
@@ -76,13 +85,13 @@ export default function ProjectCards() {
               ))}
             </ul>
           </div>
-          
+
           <div className="project-services">
             <h3>Type</h3>
             <ul>
               {groupedCategories?.map((item) => (
                 <div key={item} className="checkbox-service">
-                  <input 
+                  <input
                     type="checkbox"
                     id={`cat-check-${item}`}
                     checked={selectedTypes.includes(item)}
@@ -100,23 +109,26 @@ export default function ProjectCards() {
             <p>No projects found.</p>
           ) : (
             <div className="project-list">
-              {filteredProjects.map((item) => (
-                <div key={item.id} className="project-card">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    width={400}
-                    height={300}
-                    className="project-image"
-                  />
-                  <div className="project-info">
-                    <h4>{item.title}</h4>
-                    <p>{item.description}</p>
-                    <Link href={`/project-details/${item.id}`}>
-                      View Details 
-                    </Link>
-                  </div>
+              {filteredProjects?.map((item) => (
+                <Link 
+                href={`/project-details/${item.id}`} 
+                key={item.id}
+                className="project-card"
+              >
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width={400}
+                  height={300}
+                  className="project-image"
+                />
+                <div className="project-info">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                  <span>View Details</span>
                 </div>
+              </Link>
+              
               ))}
             </div>
           )}

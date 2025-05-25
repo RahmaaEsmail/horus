@@ -32,7 +32,8 @@
     justify-content: center;
   }
 }
-.projects-container .sidebar-overlay {
+.projects-container .sidebar-overlay.active {
+  opacity: 1;
   display: none;
   position: fixed;
   top: 0;
@@ -43,9 +44,6 @@
   z-index: 998;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-.projects-container .sidebar-overlay.active {
-  opacity: 1;
 }
 @media (max-width: 992px) {
   .projects-container .sidebar-overlay {

@@ -15,6 +15,7 @@ interface ProjectDetailsProps {
 
 
 const ProjectDetails = ({project_id}: ProjectDetailsProps) => {
+  console.log(project_id);
   const title  = project_data?.find(item => item?.id == project_id)?.title;
   console.log(title);
 

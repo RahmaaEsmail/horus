@@ -69,10 +69,13 @@ const ProjectArea = () => {
             </div>
           </div>
         </div>
-        <div className="row grid gx-35">
+        {/* <div className="row grid gx-35">
           {items.slice(0, next).map((item, i) => (
-            <div key={i} className="col-lg-4 col-md-6 col-sm-12 grid-item">
-              <div className="tp-project-4-item p-relative">
+            <div onClick={() => {
+              alert("clicked")
+              console.log("Clicked")
+            }} key={i} className="col-lg-4 col-md-6 col-sm-12 grid-item">
+              <Link  href={`/project-details/${item.id}`} className="tp-project-4-item p-relative">
                 <div className="tp-project-4-thumb">
                   <Image 
                     src={item.img} 
@@ -84,17 +87,17 @@ const ProjectArea = () => {
                 </div>
                 <div className="tp-project-4-content">
                   <h6 className="tp-project-4-title">
-                    <Link href={`/project-details/${item.id}`}>{item.title}</Link>
+                    {item.title}
                   </h6>
                   <p>{item.description}</p>
-                  <Link className="tp-btn-border-lg white-border" href={`/project-details/${item.id}`}>
+                  <div className="tp-btn-border-lg white-border">
                     <span>Read More</span>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

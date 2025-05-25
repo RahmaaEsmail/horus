@@ -17,6 +17,7 @@ type Props = {
 };
 
 const index = ({params} : Props) => {
+  console.log("project id",params)
   return (
     <Wrapper>
       <ProjectDetails project_id={params?.id}/>

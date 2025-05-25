@@ -76,7 +76,11 @@
     }
 
     .sidebar-overlay {
-      display: none;
+      
+
+      &.active {
+        opacity: 1;
+        display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -86,9 +90,6 @@
       z-index: 998;
       opacity: 0;
       transition: opacity 0.3s ease;
-
-      &.active {
-        opacity: 1;
       }
 
       @media (max-width: 992px) {
