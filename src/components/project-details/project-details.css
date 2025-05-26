@@ -303,6 +303,10 @@
   grid-template-columns: 1.5fr 1fr;
   gap: 8px;
   margin-bottom: 40px;
+  height: 300px !important;
+}
+.project_images_grid .main-img {
+  height: 100% !important;
 }
 @media (max-width: 500px) {
   .project_images_grid {
@@ -325,6 +329,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 8px;
+  height: 300px !important;
+}
+.project_images_grid .last_grid_img .main-img {
+  height: 100% !important;
 }
 .project_images_grid .last_grid_img > div {
   position: relative;

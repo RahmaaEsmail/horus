@@ -1,14 +1,12 @@
-
-
 import React from 'react';
 import Image from 'next/image';
 import shape_img from "@/assets/img/contact/shape-1-1.png"
 import ContactFormHomeOne from '@/components/forms/ContactFormHomeOne';
 
 const contact_content = {
-  subtitle: "Message",
-  title: <>Do you Question <br /> Please Contact Us ?</>,
-  description: `Nemo design enim ipsam voluptatem quim voluptas sit aspernatur aut odit auting fugit sed thisnquia consequuntur magni dolores eos designer heresm qui ratione.`
+  subtitle: "Get in Touch",
+  title: <>Have a Project in Mind? <br /> Let's Build It Together</>,
+  description: `We're here to help bring your construction vision to life. Whether you need a consultation, have questions about our services, or want to discuss your next project, our team of experts is ready to assist you.`
 }
 const {
   subtitle,

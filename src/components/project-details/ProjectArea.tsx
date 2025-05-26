@@ -165,7 +165,8 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
                 src={filteredData?.img}
                 alt="Project Main Image"
                 width={800}
-                height={600}
+                height={300}
+                className="main-img"
               />
             </div>
 
@@ -173,6 +174,7 @@ const ProjectArea = ({ project_id }: ProjectAreaProps) => {
               {filteredData?.images?.slice(1, 5)?.map((item: string, index: number) => (
                 <div key={index}>
                   <Image
+                    className="main-img"
                     src={item}
                     alt="Project Image Thumbnail"
                     width={400}

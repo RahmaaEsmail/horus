@@ -1,39 +1,39 @@
-
-
 import React from 'react';
 import Image from 'next/image';
 import logo from "@/assets/img/logo/logo-white.png";
 import SocialLinks, { CopyRight } from '@/components/common/SocialLinks';
 import Link from 'next/link';
 
+type FooterLink = {
+  title: string;
+  link: string;
+}
 
 const footer_content = {
-  description: `Corporate business typically refers to large-scale enterp mansola it becuse organizat enterprises or organizat`,
+  description: `Horus Construction is a premier construction and interior design company dedicated to transforming spaces with innovative solutions and exceptional craftsmanship. We bring your vision to life with precision and style.`,
   link_title: `Our Links`,
   links: [
-    { title: 'Dribble', link: 'https://dribble.com' },
-    { title: 'Linkedin', link: 'https://linkedin.com' },
-    { title: 'Facebook', link: 'https://facebook.com' },
-    { title: 'Behance', link: 'https://behance.com' },
+    { title: 'Instagram', link: 'https://instagram.com/' },
+    { title: 'LinkedIn', link: 'https://linkedin.com/company/' },
+    { title: 'Facebook', link: 'https://facebook.com/' },
+    { title: 'Pinterest', link: 'https://pinterest.com/' },
   ],
-  page_title: 'Pages',
+  page_title: 'Quick Links',
   pages: [
     { title: 'About Us', link: '/about-us' },
     { title: 'Services', link: '/service' },
-    { title: 'Projects', link: '/projects' },
-    { title: 'Contact Us', link: '/contact' },
+    { title: 'Portfolio', link: '/projects' },
+    { title: 'Contact', link: '/contact' },
   ],
-  info_title: `Office Information`,
-  address: <>Thornridge Cir. <br /> Shiloh 81063</>,
-  phone: '(201) 555-0124',
-  email: 'abggcd@gmail.com',
+  info_title: `Contact Information`,
+  address: <>20 Fenchurch Street, London EC3M 3BY, UK</>,
+  phone: '(212) 555-0123',
+  email: 'info@horus.com',
   our_policy: [
-    { title: 'Trams & Condition', link: '#' },
-    { title: 'Privacy Policy', link: '#' },
-    { title: 'Sitemap', link: '#' },
-
+    { title: 'Terms & Conditions', link: '/terms' },
+    { title: 'Privacy Policy', link: '/privacy' },
+    { title: 'Sitemap', link: '/sitemap' },
   ]
-
 }
 
 const {
@@ -60,7 +60,7 @@ const FooterThree = () => {
         <div className="tp-footer-area tp-footer-style-2 tp-footer-style-3 pt-75 pb-50">
           <div className="container">
             <div className="row">
-              <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+              <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                 <div className="tp-footer-widget footer-cols-3-1">
                   <div className="tp-footer-logo">
                     <Link href="/">
@@ -81,7 +81,7 @@ const FooterThree = () => {
                   <div className="tp-footer-list">
                     <ul>
                       {links.map((link, i) => (
-                        <li key={i}><a href={link.link}>{link.title}</a></li>
+                        <li key={i}><a href={link?.link}>{link?.title}</a></li>
                       ))}
                     </ul>
                   </div>

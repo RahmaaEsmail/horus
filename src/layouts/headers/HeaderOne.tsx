@@ -51,12 +51,12 @@ const HeaderOne = ({ onePageHomeOne, onePageHomeThree }: any) => {
                 <ul className="d-flex flex-wrap justify-content-center justify-content-md-start">
                   <li className="d-none d-md-inline-block me-3">
                     <i className="fa-solid fa-envelope"></i>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:info@example.com">info@horus.com</a>
                   </li>
                   <li>
                     <i className="fa-solid fa-location-dot"></i>
-                    <a target="_blank" href="https://www.google.com/maps/place/Cumberland+House,+SK,+Canada/@53.6729773,-103.7836571,8z/data=!4m15!1m8!3m7!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!2sCanada!3b1!8m2!3d56.130366!4d-106.346771!16zL20vMGQwNjBn!3m5!1s0x52f917b0cc93e6c1:0x44da1470d37ba724!8m2!3d53.958266!4d-102.267444!16zL20vMDZteWx5?entry=ttu">
-                      6391 Elgin St. Celina, 10299
+                    <a target="_blank" href="https://www.google.com/maps/place/20+Fenchurch+St,+London+EC3M+3BY,+UK/@51.5115,-0.0837,17z/data=!3m1!4b1!4m6!3m5!1s0x4876034d2a0a0a0a:0x0!2s20+Fenchurch+St,+London+EC3M+3BY,+UK!5e0!3m2!1sen!2suk!4v1">
+                      20 Fenchurch Street, London EC3M 3BY, UK
                     </a>
                   </li>
                 </ul>
@@ -64,10 +64,10 @@ const HeaderOne = ({ onePageHomeOne, onePageHomeThree }: any) => {
             </div>
             <div className="col-xl-5 col-lg-6 col-md-12 col-sm-12">
               <div className="tp-header-top-social text-center text-md-end mt-2 mt-md-0">
-                <a href="#" className="me-3"><i className="fa-brands fa-facebook-f"></i></a>
-                <a href="#" className="me-3"><i className="fa-brands fa-instagram"></i></a>
-                <a href="#" className="me-3"><i className="fa-brands fa-twitter"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/" className="me-3"><i className="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" className="me-3"><i className="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/" className="me-3"><i className="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ const HeaderOne = ({ onePageHomeOne, onePageHomeThree }: any) => {
           <div className="mobile-contact">
             <ul>
               <li><i className="fa-solid fa-envelope"></i> info@example.com</li>
-              <li><i className="fa-solid fa-location-dot"></i> 6391 Elgin St. Celina, 10299</li>
+              <li><i className="fa-solid fa-location-dot"></i> 20 Fenchurch Street, London EC3M 3BY, UK</li>
             </ul>
           </div>
           <div className="mobile-social">

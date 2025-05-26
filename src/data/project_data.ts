@@ -43,7 +43,7 @@ interface DataType {
   path: string;
   price?: number;
   category?: string | any;
-  img: StaticImageData;
+  img: string | StaticImageData;
   title: string;
   description?: string;
   images: any;
@@ -70,6 +70,67 @@ interface DataType {
 }
 
 const project_data: DataType[] = [
+  {
+    id: 1,
+    service: "General Contracting",
+    path: "commercial",
+    category: "Restaurant",
+    title: "Nour Maison",
+    img: "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748247479/download_b1l96d_zrow8y.jpg",
+    description:
+      "Modern restaurant space with contemporary design and premium dining experience.",
+    images: [
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748247970/download_cmgnkv_cy0uwj.jpg",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748247970/465984384_1590238098232979_2569484348972359367_n_lndhof_ei7ooq.jpg",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748247970/zexptzvrvwxbsvi8pqho_ejayft.webp",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748247969/466253647_534065926272992_1731520913535440885_n_lccww5_x2bil4.jpg",
+      "https://res.cloudinary.com/dbz6ebekj/image/upload/v1748247479/download_b1l96d_zrow8y.jpg",
+    ],
+    location: "149 Grafton Gate, Milton Keynes MK9 1AE, UK",
+    specs: {
+      floors: 2,
+      basementLevels: 1,
+      parkingCapacity: "50+ cars",
+      builtUpArea: "500 sqm",
+      deliveryDate: "Q4 2024",
+    },
+    overview:
+      "A premium dining establishment featuring modern architecture, state-of-the-art kitchen facilities, and elegant dining spaces.",
+    features: [
+      "Modern kitchen equipment",
+      "Indoor and outdoor seating",
+      "Private dining rooms",
+      "Bar and lounge area",
+      "Smart reservation system",
+    ],
+    nearbyLandmarks: [
+      "5 minutes to Milton Keynes Central",
+      "10 minutes to Shopping Centre",
+      "15 minutes to Business District",
+    ],
+    timeline: [
+      {
+        date: "January 2023",
+        title: "Project Initiation",
+        description: "Design and planning phase",
+      },
+      {
+        date: "June 2023",
+        title: "Construction Started",
+        description: "Interior renovation and kitchen installation",
+      },
+    ],
+    outcomes: [
+      {
+        value: "200",
+        label: "Seating Capacity",
+      },
+      {
+        value: "500",
+        label: "Built-up Area (sqm)",
+      },
+    ],
+  },
   // 🏢 Commercial Projects
   {
     id: 1,
