@@ -5,7 +5,7 @@ import ContactFormHomeOne from '@/components/forms/ContactFormHomeOne';
 
 const contact_content = {
   subtitle: "Get in Touch",
-  title: <>Have a Project in Mind? <br /> Let's Build It Together</>,
+  title: <>Have a Project in Mind? <br /> Let&apos;s Build It Together</>,
   description: `We&apos;re here to help bring your construction vision to life. Whether you need a consultation, have questions about our services, or want to discuss your next project, our team of experts is ready to assist you.`
 }
 const {
